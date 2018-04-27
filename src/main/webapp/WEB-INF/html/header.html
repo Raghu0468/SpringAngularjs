@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <title>Dashboard - Ace Admin</title>
+
+    <meta name="description" content="overview &amp; stats"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="resources/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="resources/components/font-awesome/css/font-awesome.css"/>
+
+    <!-- page specific plugin styles -->
+    <script src="resources/assets/js/src/ace.sidebar.js"></script>
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="resources/assets/css/ace-fonts.css"/>
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="resources/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style"/>
+
+    <link rel="stylesheet" href="resources/assets/css/ace-skins.css"/>
+    <link rel="stylesheet" href="resources/assets/css/ace-rtl.css"/>
+
+
+    <script src="resources/components/jquery/dist/jquery.js"></script>
+    <script src="resources/components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+
+    <script src="resources/scripts/route.js"></script>
+
+    <script src="resources/assets/js/ace-extra.js"></script>
+    
+    <script src="resources/controllers/galleryCtrl.js"></script>
+    <script src="resources/controllers/dCtrl.js"></script>
+	<script src="resources/controllers/emailCtrl.js"></script>
+	<script src="resources/controllers/errorCtrl.js"></script>
+	<script src="resources/controllers/errorsCtrl.js"></script>
+	<script src="resources/controllers/invoiceCtrl.js"></script>
+	<script src="resources/controllers/ptableCtrl.js"></script>
+	
+</head>
+
+<body ng-app="myApp" class="name">
+
+<div class="no-skin">
+    <!-- #section:basics/navbar.layout -->
+    <div id="navbar" class="navbar navbar-default ace-save-state">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+
+            <!-- #section:basics/sidebar.mobile.toggle -->
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                <span class="sr-only">Toggle sidebar</span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- /section:basics/sidebar.mobile.toggle -->
+            <div class="navbar-header pull-left">
+                <!-- #section:basics/navbar.layout.brand -->
+                <a href="#" class="navbar-brand">
+                    <small>
+                        <i class="fa fa-leaf"></i>
+                        Ace Admin
+                    </small>
+                </a>
+            </div>
+            <div ng-include="'notify.html'"></div>
+
+            <!-- /section:basics/navbar.dropdown -->
+        </div><!-- /.navbar-container -->
+    </div>
+</div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<div class="main-container ace-save-state" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.loadState('main-container')
+        } catch (e) {
+        }
+    </script>
+
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive ace-save-state">
+        <script type="text/javascript">
+            try {
+                ace.settings.loadState('sidebar')
+            } catch (e) {
+            }
+        </script>
+
+        <div ng-include="'menu.html'"></div>
+
+    </div>
+
+    <!-- basic scripts -->
+
+    <!--[if !IE]> -->
+    <!--script src="resources/components/jquery/resources/dist/jquery.js"></script -->
+
+    <!-- <![endif]-->
+
+    <!--[if IE]>
+    <script src="resources/components/jquery.1x/resources/dist/jquery.js"></script>
+    <![endif]-->
+
+    <!--script src="resources/components/bootstrap/resources/dist/js/bootstrap.js"></script -->
+
+    <!-- page specific plugin scripts -->
+
+    <!--[if lte IE 8]>
+    <script src="resources/components/ExplorerCanvas/excanvas.js"></script>
+    <![endif]-->
+    <script src="resources/components/_mod/jquery-ui.custom/jquery-ui.custom.js"></script>
+    <script src="resources/components/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
+    <script src="resources/components/_mod/easypiechart/jquery.easypiechart.js"></script>
+    <script src="resources/components/jquery.sparkline/index.js"></script>
+
+    <!-- ace scripts -->
+    <script src="resources/assets/js/src/elements.scroller.js"></script>
+    <script src="resources/assets/js/src/elements.colorpicker.js"></script>
+    <script src="resources/assets/js/src/elements.fileinput.js"></script>
+    <script src="resources/assets/js/src/elements.typeahead.js"></script>
+    <script src="resources/assets/js/src/elements.wysiwyg.js"></script>
+    <script src="resources/assets/js/src/elements.spinner.js"></script>
+    <script src="resources/assets/js/src/elements.treeview.js"></script>
+    <script src="resources/assets/js/src/elements.wizard.js"></script>
+    <script src="resources/assets/js/src/elements.aside.js"></script>
+    <script src="resources/assets/js/src/ace.js"></script>
+    <script src="resources/assets/js/src/ace.basics.js"></script>
+    <script src="resources/assets/js/src/ace.scrolltop.js"></script>
+    <script src="resources/assets/js/src/ace.ajax-content.js"></script>
+    <script src="resources/assets/js/src/ace.touch-drag.js"></script>
+    <script src="resources/assets/js/src/ace.sidebar.js"></script>
+    <script src="resources/assets/js/src/ace.sidebar-scroll-1.js"></script>
+    <script src="resources/assets/js/src/ace.submenu-hover.js"></script>
+    <script src="resources/assets/js/src/ace.widget-box.js"></script>
+    <script src="resources/assets/js/src/ace.settings.js"></script>
+    <script src="resources/assets/js/src/ace.settings-rtl.js"></script>
+    <script src="resources/assets/js/src/ace.settings-skin.js"></script>
+    <script src="resources/assets/js/src/ace.widget-on-reload.js"></script>
+    <script src="resources/assets/js/src/ace.searchbox-autocomplete.js"></script>
+
+
+    <!--script src="resources/components/bootstrap/resources/dist/js/bootstrap.js"></script -->
+
+    <!-- page specific plugin scripts -->
+    <script src="resources/components/google-code-prettify/src/prettify.js"></script>
+</div>
+<ng-view></ng-view>
+
+</body>
+<div ng-include="'footer.html'"></div>
+</html>

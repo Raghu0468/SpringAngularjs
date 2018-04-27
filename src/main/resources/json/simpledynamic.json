@@ -1,0 +1,99 @@
+[
+    {
+        "tableData": {
+            "label": "Static & Dynamic Tables",
+            "data": [
+                {
+                    "id": "1",
+                    "domain": "app.com",
+                    "price": "$45",
+                    "clicks": "3,330",
+                    "update": "Feb 12",
+                    "status": "expiring",
+                    "selected": false
+                },
+                {
+                    "id": "2",
+                    "domain": "base.com",
+                    "price": "$35",
+                    "clicks": "2,595",
+                    "update": "Feb 18",
+                    "status": "registered",
+                    "selected": false
+                },
+                {
+                    "id": "3",
+                    "domain": "max.com",
+                    "price": "$60",
+                    "clicks": "4,400",
+                    "update": "Mar 11",
+                    "status": "expiring",
+                    "selected": false
+                },
+                {
+                    "id": "4",
+                    "domain": "best.com",
+                    "price": "$75",
+                    "clicks": "6,500",
+                    "update": "Apr 03",
+                    "status": "flagged",
+                    "selected": false
+                },
+                {
+                    "id": "5",
+                    "domain": "pro.com",
+                    "price": "$55",
+                    "clicks": "4,250",
+                    "update": "Jan 21",
+                    "status": "registered",
+                    "selected": false
+                },
+                {
+                    "id": "6",
+                    "domain": "team.com",
+                    "price": "$40",
+                    "clicks": "3,200",
+                    "update": "Feb 09",
+                    "status": "flagged",
+                    "selected": false
+                },
+                {
+                    "id": "7",
+                    "domain": "up.com",
+                    "price": "$95",
+                    "clicks": "8,520",
+                    "update": "Feb 22",
+                    "status": "sold",
+                    "selected": false
+                },
+                {
+                    "id": "8",
+                    "domain": "view.com",
+                    "price": "$45",
+                    "clicks": "4,100",
+                    "update": "Mar 12",
+                    "status": "registered",
+                    "selected": false
+                },
+                {
+                    "id": "9",
+                    "domain": "nice.com",
+                    "price": "$38",
+                    "clicks": "3,940",
+                    "update": "Feb 12",
+                    "status": "sold",
+                    "selected": false
+                },
+                {
+                    "id": "10",
+                    "domain": "good.com",
+                    "price": "$50",
+                    "clicks": "6,500",
+                    "update": "Feb 02",
+                    "status": "flagged",
+                    "selected": false
+                }
+            ]
+        }
+    }
+]
