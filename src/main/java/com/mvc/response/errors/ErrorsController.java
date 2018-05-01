@@ -18,7 +18,7 @@ public class ErrorsController {
 
       try {
          JSONParser parser = new JSONParser();
-         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\Spring_Raghu-master\\src\\main\\resources\\json\\error500.json"));
+         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\SpringAngularjs\\src\\main\\resources\\json\\error500.json"));
 
          return a.toArray();
 

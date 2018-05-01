@@ -1,4 +1,5 @@
-package com.mvc.response.pricingtable;
+
+package com.mvc.response.table;
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
@@ -9,16 +10,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.FileReader;
 
 @Controller
-@RequestMapping("/pricingtable")
-public class PricingtableController {
+@RequestMapping("/table")
+public class TableController {
 
-   @RequestMapping(value = "pricing.json", produces = "application/json")
+   @RequestMapping(value = "simpledynamic.json", produces = "application/json")
    public @ResponseBody
-   Object[] getPricingtableList() {
+   Object[] getTableList() {
 
       try {
          JSONParser parser = new JSONParser();
-         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\SpringAngularjs\\src\\main\\resources\\json\\pricingtables.json"));
+         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\Spring_Raghu-master\\src\\main\\resources\\json\\simpledynamic.json"));
 
          return a.toArray();
 
@@ -30,4 +31,3 @@ public class PricingtableController {
    }
 
 }
-

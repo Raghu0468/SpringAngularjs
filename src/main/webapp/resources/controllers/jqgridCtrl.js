@@ -2,14 +2,10 @@
 //var app = angular.module("myApp", ["ngRoute"]);
 
 myApp.controller("jqgridCtrl", function ($scope,$http) {
-	console.log("name");
-    $scope.msg = "";
+
+	 $scope.fetchJqgridList = function () {
+	        $http.get('jqgrid/jqgridplugin.json').then(function (response) {
 	
-	$http({
-method: 'GET',
-cache: true,
-url: "http://localhost:8085/user/articles"
-}).then(function successCallback(response) {
 console.log(response.data);
 var tData=response.data;
 //console.log("hjsadhjshdjh 545");
@@ -428,10 +424,8 @@ console.log(fnlBox);
 $scope.boxes=fnlBox;
 
  */
+	        });
+	    };
+	    $scope.fetchJqgridList();
 
-}, function errorCallback(response) {
-//console.log(response);
-console.log('data');
-
-});
-});
+	});

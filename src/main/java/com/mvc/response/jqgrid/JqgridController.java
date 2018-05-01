@@ -1,4 +1,5 @@
-package com.mvc.response.invoice;
+package com.mvc.response.jqgrid;
+
 
 import java.io.FileReader;
 
@@ -9,15 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/invoice")
-public class InvoiceController {
-	@RequestMapping(value = "invoice.json", produces = "application/json")
+@RequestMapping("/jqgrid")
+public class JqgridController {
+	@RequestMapping(value = "jqgridplugin.json", produces = "application/json")
 	   public @ResponseBody
-	   Object[] getInvoiceList() {
+	   Object[] getJqgridList() {
 
 	      try {
 	         JSONParser parser = new JSONParser();
-	         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\SpringAngularjs\\src\\main\\resources\\json\\invoice.json"));
+	         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\SpringAngularjs\\src\\main\\resources\\json\\jqgridplugin.json"));
 
 	         return a.toArray();
 

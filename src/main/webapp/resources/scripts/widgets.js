@@ -71,7 +71,7 @@ jQuery(function($) {
 				
 			
 				// widget boxes
-				// widget box drag &amp; drop example
+				// widget box drag & drop example
 			    $('.widget-container-col').sortable({
 			        connectWith: '.widget-container-col',
 					items:'> .widget-box',
@@ -111,6 +111,9 @@ jQuery(function($) {
 						ace.data.set('demo', 'widget-order', widget_order, null, true);
 					}
 			    });
+				
+				
+				///////////////////////
 			
 				//when a widget is shown/hidden/closed, we save its state for later retrieval
 				$(document).on('shown.ace.widget hidden.ace.widget closed.ace.widget', '.widget-box', function(event) {
@@ -132,7 +135,7 @@ jQuery(function($) {
 							var widgets_inside_container = container_list[container_id];
 							if(widgets_inside_container.length == 0) continue;
 							
-							for(var i = 0, i &lt; widgets_inside_container.length; i++) {
+							for(var i = 0; i < widgets_inside_container.length; i++) {
 								var widget = widgets_inside_container[i];
 								$('#'+widget).appendTo('#'+container_id);
 							}
@@ -149,9 +152,9 @@ jQuery(function($) {
 							var widget = $('#'+id);
 							if
 							(
-								(state == 'shown' &amp;&amp; widget.hasClass('collapsed'))
+								(state == 'shown' && widget.hasClass('collapsed'))
 								||
-								(state == 'hidden' &amp;&amp; !widget.hasClass('collapsed'))
+								(state == 'hidden' && !widget.hasClass('collapsed'))
 							) 
 							{
 								widget.widget_box('toggleFast');
