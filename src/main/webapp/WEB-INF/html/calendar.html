@@ -1,7 +1,7 @@
 
 			<!-- page specific plugin styles -->
 		<link rel="stylesheet" href="resources/components/_mod/jquery-ui.custom/jquery-ui.custom.css" />
-		<link rel="stylesheet" href="resources/components/fullcalendar/resources/dist/fullcalendar.css" />
+		<link rel="stylesheet" href="resources/components/fullcalendar/dist/fullcalendar.css" />
 
 		<!-- text fonts -->
 		<link rel="stylesheet" href="resources/assets/css/ace-fonts.css" />
@@ -27,10 +27,10 @@
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 	
-		<script src="resources/components/html5shiv/resources/dist/html5shiv.min.js"></script>
+		<script src="resources/components/html5shiv/dist/html5shiv.min.js"></script>
 		<script src="resources/components/respond/dest/respond.min.js"></script>
 
-	<div class = "flex-container">
+<div class = "flex-container" ng-app="myApp" ng-controller="calendarCtrl">
    <div class = "row">
    <div class="col-sm-12" style="width:85%; ">
        
@@ -151,10 +151,10 @@
 						<!-- /section:settings.box -->
 						<div class="page-header">
 							<h1>
-								Full Calendar
+								{{label}}
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-									with draggable and editable events
+									{{lab}}
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -181,39 +181,39 @@
 											<div class="widget-body">
 												<div class="widget-main no-padding">
 													<div id="external-events">
-														<div class="external-event label-grey" data-class="label-grey">
-															<i class="ace-icon fa fa-arrows"></i>
-															My Event 1
+														<div class="{{eInfoColor}}" data-class="{{eInfoLabel}}">
+															<i class="{{eInfoIcon}}"></i>
+															{{eInfoName}}
 														</div>
 
-														<div class="external-event label-success" data-class="label-success">
-															<i class="ace-icon fa fa-arrows"></i>
-															My Event 2
+														<div class="{{eInfoc}}" data-class="{{eInfol}}">
+															<i class="{{eInfoo}}"></i>
+															{{eInfon}}
 														</div>
 
-														<div class="external-event label-danger" data-class="label-danger">
-															<i class="ace-icon fa fa-arrows"></i>
-															My Event 3
+														<div class="{{eInfoa}}" data-class="{{eInfob}}">
+															<i class="{{eInfoe}}"></i>
+															{{eInfod}}
 														</div>
 
-														<div class="external-event label-purple" data-class="label-purple">
-															<i class="ace-icon fa fa-arrows"></i>
-															My Event 4
+														<div class="{{eInfoCoor}}" data-class="{{eInfoLael}}">
+															<i class="{{eInfoIon}}"></i>
+															{{eInfoNme}}
 														</div>
 
-														<div class="external-event label-yellow" data-class="label-yellow">
-															<i class="ace-icon fa fa-arrows"></i>
-															My Event 5
+														<div class="{{eInfoClor}}" data-class="{{eInfoLbel}}">
+															<i class="{{eInfoIn}}"></i>
+															{{eInfoNa}}
 														</div>
 
-														<div class="external-event label-pink" data-class="label-pink">
-															<i class="ace-icon fa fa-arrows"></i>
-															My Event 6
+														<div class="{{eInfoCr}}" data-class="{{eInfoLl}}">
+															<i class="{{eInfoIcons}}"></i>
+															{{eInfoNames}}
 														</div>
 
-														<div class="external-event label-info" data-class="label-info">
-															<i class="ace-icon fa fa-arrows"></i>
-															My Event 7
+														<div class="{{eInfoColors}}" data-class="{{eInfoLabels}}">
+															<i class="{{eInfoIconi}}"></i>
+															{{eInfoNamei}}
 														</div>
 
 														<label>
@@ -239,25 +239,26 @@
 			</div>
 		
 
+		
+
 		<!-- basic scripts -->
 
 		
-	<script src="resources/components/jquery/resources/dist/jquery.js"></script>
-
-		
-
-		
-<script src="resources/components/jquery.1x/resources/dist/jquery.js"></script>
-
+	<script src="resources/components/jquery/dist/jquery.js"></script>
 	
-		<script src="resources/components/bootstrap/resources/dist/js/bootstrap.js"></script>
+	<script src="resources/components/jquery.1x/dist/jquery.js"></script>
+
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("&lt;script src='resources/components/_mod/jquery.mobile.custom/jquery.mobile.custom.js'&gt;"+"&lt;"+"/script&gt;");
+		</script>
+		<script src="resources/components/bootstrap/dist/js/bootstrap.js"></script>
 
 		<!-- page specific plugin scripts -->
         
 		<script src="resources/components/_mod/jquery-ui.custom/jquery-ui.custom.js"></script>
 		<script src="resources/components/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
 		<script src="resources/components/moment/moment.js"></script>
-		<script src="resources/components/fullcalendar/resources/dist/fullcalendar.js"></script>
+		<script src="resources/components/fullcalendar/dist/fullcalendar.js"></script>
 		<script src="resources/components/bootbox.js/bootbox.js"></script>
 
 		<!-- ace scripts -->
@@ -296,7 +297,7 @@
 
 	$('#external-events div.external-event').each(function() {
 
-		// create an Event Object (http://arshaw.com/fullcalendar/resources/docs/event_data/Event_Object/)
+		// create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
 		// it doesn't need to have a start or end
 		var eventObject = {
 			title: $.trim($(this).text()) // use the element's text as the event title
@@ -389,7 +390,7 @@
 			if($extraEventClass) copiedEventObject['className'] = [$extraEventClass];
 			
 			// render the event on the calendar
-			// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/resources/docs/event_rendering/renderEvent/)
+			// the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
 			$('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
 			
 			// is the "remove after drop" checkbox checked?
