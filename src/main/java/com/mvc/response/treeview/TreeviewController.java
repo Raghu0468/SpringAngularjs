@@ -1,8 +1,8 @@
-package com.mvc.response.gallery;
+
+package com.mvc.response.treeview;
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,17 +10,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.FileReader;
 
 @Controller
-@RequestMapping("/gallery")
-public class GalleryController {
+@RequestMapping("/treeview")
+public class TreeviewController {
 
-   @RequestMapping(value = "items.json", produces = "application/json")
+   @RequestMapping(value = "treeview.json", produces = "application/json")
    public @ResponseBody
-   Object[] getGalleryList() {
+   Object[] getTreeviewList() {
 
       try {
-    	  ClassPathResource classPathResource = new ClassPathResource("json" + "\\gallery.json");
          JSONParser parser = new JSONParser();
-         JSONArray a = (JSONArray) parser.parse(new FileReader(classPathResource.getFile()));
+         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\SpringAngularjs\\src\\main\\resources\\json\\treeview.json"));
 
          return a.toArray();
 

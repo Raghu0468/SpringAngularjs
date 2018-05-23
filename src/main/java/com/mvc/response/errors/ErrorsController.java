@@ -2,6 +2,7 @@ package com.mvc.response.errors;
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,9 +17,10 @@ public class ErrorsController {
    public @ResponseBody
    Object[] getErrorsList() {
 
-      try {
-         JSONParser parser = new JSONParser();
-         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\SpringAngularjs\\src\\main\\resources\\json\\error500.json"));
+	   try {
+		     ClassPathResource classPathResource = new ClassPathResource("json" + "\\error500.json");
+		     JSONParser parser = new JSONParser();
+		     JSONArray a = (JSONArray) parser.parse(new FileReader(classPathResource.getFile()));
 
          return a.toArray();
 

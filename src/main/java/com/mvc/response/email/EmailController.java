@@ -2,6 +2,7 @@ package com.mvc.response.email;
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,10 +17,10 @@ public class EmailController {
    public @ResponseBody
    Object[] getEmailList() {
 
-      try {
-         JSONParser parser = new JSONParser();
-         JSONArray a = (JSONArray) parser.parse(new FileReader("D:\\Project\\SpringAngularjs\\src\\main\\resources\\json\\email.json"));
-
+	   try {
+		     ClassPathResource classPathResource = new ClassPathResource("json" + "\\email.json");
+		     JSONParser parser = new JSONParser();
+		     JSONArray a = (JSONArray) parser.parse(new FileReader(classPathResource.getFile()));
          return a.toArray();
 
       } catch (Exception e) {

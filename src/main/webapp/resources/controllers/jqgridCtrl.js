@@ -8,24 +8,13 @@ myApp.controller("jqgridCtrl", function ($scope,$http) {
 	
 console.log(response.data);
 var tData=response.data;
-//console.log("hjsadhjshdjh 545");
+
  var tRes=tData[0].tableData;
 var tabLabel=tRes.label;
-//alert(tabLabel);
- console.log(tRes);
+
  var tableData=tRes.data;
- console.log("tab;e datat");
- console.log(tableData);
- // var tLength=tableData.length;
- // alert(tLength);
- // var myarray = [];
- // for(var i=0;i<=tLength;i++){
-	 // console.log(tableData[i]);
-	 // myarray.push(tableData[i]);
- // }
- // console.log(myarray);
- //tRes.tableData
-/*table data */
+  console.log(tableData);
+
 var grid_data = tableData;
 			
 			var subgrid_data = 
@@ -75,10 +64,6 @@ var grid_data = tableData;
 				  }
 				})
 				*/
-				
-				
-			
-			
 			
 				jQuery(grid_selector).jqGrid({
 					//direction: "rtl",
@@ -108,7 +93,6 @@ var grid_data = tableData;
 						});
 					},
 					
-			
 			
 					data: grid_data,
 					datatype: "local",
@@ -412,18 +396,6 @@ var grid_data = tableData;
 				});
 			});
 
-/*table data */
-/* var resData=response.data;
-//$scope.dashboard=resData;
-console.log("==");
-console.log(resData);
-console.log("==");
-var boxRes=resData[0];
-var fnlBox=boxRes.boxes;
-console.log(fnlBox);
-$scope.boxes=fnlBox;
-
- */
 	        });
 	    };
 	    $scope.fetchJqgridList();
