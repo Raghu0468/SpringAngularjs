@@ -24,18 +24,17 @@
     <link rel="stylesheet" href="resources/assets/css/ace-skins.css"/>
     <link rel="stylesheet" href="resources/assets/css/ace-rtl.css"/>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <script src="resources/components/jquery/dist/jquery.js"></script>
     <script src="resources/components/bootstrap/dist/js/bootstrap.js"></script>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.js"></script>
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.min.js"></script>
     
 
     <script src="resources/scripts/route.js"></script>
-
-    <script src="resources/assets/js/ace-extra.js"></script>
     
     <script src="resources/controllers/galleryCtrl.js"></script>
     <script src="resources/controllers/dCtrl.js"></script>
@@ -48,6 +47,8 @@
 	<script src="resources/controllers/tableCtrl.js"></script>
 	<script src="resources/controllers/calendarCtrl.js"></script>
 	<script src="resources/controllers/treeviewCtrl.js"></script>
+	
+	<script src="resources/assets/js/ace-extra.js"></script>
 	
 </head>
 
@@ -106,7 +107,11 @@
         <div ng-include="'menu.html'"></div>
 
     </div>
-
+    <script src="resources/components/jquery/dist/jquery.js"></script>
+    
+	<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("&lt;script src='resources/components/_mod/jquery.mobile.custom/jquery.mobile.custom.js'&gt;"+"&lt;"+"/script&gt;");
+		</script>
     
     <script src="resources/components/_mod/jquery-ui.custom/jquery-ui.custom.js"></script>
     <script src="resources/components/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
@@ -137,7 +142,8 @@
     <script src="resources/assets/js/src/ace.settings-skin.js"></script>
     <script src="resources/assets/js/src/ace.widget-on-reload.js"></script>
     <script src="resources/assets/js/src/ace.searchbox-autocomplete.js"></script>
-
+		
+		<script src="resources/components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- page specific plugin scripts -->
     <script src="resources/components/google-code-prettify/src/prettify.js"></script>
 </div>

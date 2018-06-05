@@ -53,10 +53,8 @@ myApp.controller("calendarCtrl", function ($scope, $http) {
     	$scope.eInfoLabels=drags.label7;
     	$scope.eInfoIconi=drags.icon7;
     	$scope.eInfoNamei=drags.name7;
-    	
-    	
-    	
 
+   
     	jQuery(function($) {
             
     		/* initialize the external events
@@ -99,7 +97,7 @@ myApp.controller("calendarCtrl", function ($scope, $http) {
     					prev: '<i class="ace-icon fa fa-chevron-left"></i>',
     					next: '<i class="ace-icon fa fa-chevron-right"></i>'
     				},
-    			
+    				
     				header: {
     					left: 'prev,next today',
     					center: 'title',
@@ -139,7 +137,7 @@ myApp.controller("calendarCtrl", function ($scope, $http) {
     				editable: true,
     				droppable: true, // this allows things to be dropped onto the calendar !!!
     				drop: function(date) { // this function is called when something is dropped
-    				
+    					
     					// retrieve the dropped element's stored Event Object
     					var originalEventObject = $(this).data('eventObject');
     					var $extraEventClass = $(this).attr('data-class');

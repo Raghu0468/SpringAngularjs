@@ -1,5 +1,5 @@
 var app = angular.module('myApp', []);
-app.controller('myCtrl', function ($scope, $location, $http) {
+app.controller('myCtrl', function ($scope, $location, $http, $filter) {
     $scope.username = "";
     $scope.password = "";
     $scope.submit = function () {
