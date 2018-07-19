@@ -7,7 +7,7 @@ myApp.controller("dCtrl", function ($scope, $http) {
     $scope.Conversation;
 
     $scope.fetchDList = function () {
-        $http.get('dashboard/box.json').then(function (response) {
+        $http.get('http://localhost:9090/spring/dashboard').then(function (response) {
 
             var resData = response.data;
 

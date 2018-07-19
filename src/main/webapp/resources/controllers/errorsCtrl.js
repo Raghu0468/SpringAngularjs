@@ -2,7 +2,7 @@ myApp.controller("errorsCtrl", function ($scope,$http) {
 	 
 	
 	 $scope.fetchErrorsList = function () {
-	        $http.get('errors/error500.json').then(function (response) {
+	        $http.get('http://localhost:9090/spring/error500').then(function (response) {
 
 var resData=response.data[0].Box;
 var header=resData.header[0];

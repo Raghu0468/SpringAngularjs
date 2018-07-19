@@ -2,7 +2,7 @@
 myApp.controller("ptableCtrl", function ($scope, $http) {
 	
 		$scope.fetchPricingtableList = function () {
-			$http.get('pricingtable/pricing.json').then(function (response) {
+			$http.get('http://localhost:9090/spring/pricing').then(function (response) {
         	
 var resData=response.data;
 console.log(resData);

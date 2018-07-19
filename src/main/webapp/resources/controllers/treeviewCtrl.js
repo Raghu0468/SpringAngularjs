@@ -4,7 +4,7 @@ myApp.controller("treeviewCtrl", function ($scope, $http) {
     $scope.msg = "";
     
     $scope.fetchTreeviewList = function () {
-        $http.get('treeview/treeview.json').then(function (response) {
+        $http.get('http://localhost:9090/spring/treeview').then(function (response) {
 
             var resData = response.data;
             console.log(resData);

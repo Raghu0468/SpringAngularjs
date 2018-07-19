@@ -1,7 +1,7 @@
 myApp.controller("tableCtrl", function ($scope, $http) {
 
     $scope.fetchTableList = function () {
-        $http.get('table/simpledynamic.json').then(function (response) {
+        $http.get('http://localhost:9090/spring/simpledynamic').then(function (response) {
         	
 			jQuery(function($) {
 				//initiate dataTables plugin

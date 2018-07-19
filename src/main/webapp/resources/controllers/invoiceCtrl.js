@@ -3,7 +3,7 @@ myApp.controller("invoiceCtrl", function ($scope,$http) {
 
 	
 	$scope.fetchInvoiceList = function () {
-        $http.get('invoice/invoice.json').then(function (response) {
+        $http.get('http://localhost:9090/spring/invoice').then(function (response) {
         	
         	var resData=response.data;
         	console.log(resData);

@@ -2,7 +2,7 @@ myApp.controller("calendarCtrl", function ($scope, $http) {
 	
 	
 	$scope.fetchCalendarList = function () {
-    $http.get('calendar/calendar.json').then(function (response) {
+    $http.get('http://localhost:9090/spring/calendar').then(function (response) {
 
     	var resData=response.data;
     	console.log(resData);

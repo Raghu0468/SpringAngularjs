@@ -2,7 +2,7 @@
 myApp.controller("emailCtrl", function ($scope,$http) {
 
 	$scope.fetchEmailList = function () {
-        $http.get('email/email.json').then(function (response) {
+        $http.get('http://localhost:9090/spring/email').then(function (response) {
         	
         
 var resData=response.data;

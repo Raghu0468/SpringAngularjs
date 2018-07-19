@@ -4,7 +4,7 @@
 myApp.controller("jqgridCtrl", function ($scope,$http) {
 
 	 $scope.fetchJqgridList = function () {
-	        $http.get('jqgrid/jqgridplugin.json').then(function (response) {
+	        $http.get('http://localhost:9090/spring/jqgridplugin').then(function (response) {
 	
 console.log(response.data);
 var tData=response.data;

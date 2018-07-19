@@ -6,7 +6,7 @@ myApp.controller("galleryCtrl", function ($scope, $http) {
     $scope.editMode = false;
 
     $scope.fetchGalleryList = function () {
-        $http.get('gallery/items.json').then(function (response) {
+        $http.get('http://localhost:9090/spring/gallery').then(function (response) {
 
             console.log(response.data);
 

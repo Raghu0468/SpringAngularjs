@@ -2,7 +2,7 @@
 myApp.controller("errorCtrl", function ($scope,$http) {
 	
 	$scope.fetchErrorList = function () {
-        $http.get('error/error404.json').then(function (response) {
+        $http.get('http://localhost:9090/spring/error404').then(function (response) {
 
 var resData=response.data;
 console.log(resData);

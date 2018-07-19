@@ -1,38 +1,20 @@
-<link rel="stylesheet" href="resources/assets/css/bootstrap.css" />
+		<link rel="stylesheet" href="resources/assets/css/bootstrap.css" />
 		<link rel="stylesheet" href="resources/components/font-awesome/css/font-awesome.css" />
 
 		<!-- page specific plugin styles -->
-		<link rel="stylesheet" href="resources/components/bootstrap-duallistbox/resources/dist/bootstrap-duallistbox.css" />
-		<link rel="stylesheet" href="resources/components/bootstrap-multiselect/resources/dist/css/bootstrap-multiselect.css" />
-		<link rel="stylesheet" href="resources/components/select2/resources/dist/css/select2.css" />
+		<link rel="stylesheet" href="resources/components/bootstrap-duallistbox/dist/bootstrap-duallistbox.css" />
+		<link rel="stylesheet" href="resources/components/bootstrap-multiselect/dist/css/bootstrap-multiselect.css" />
+		<link rel="stylesheet" href="resources/components/select2/dist/css/select2.css" />
 
 		<!-- text fonts -->
 		<link rel="stylesheet" href="resources/assets/css/ace-fonts.css" />
 
-		<!-- ace styles -->
 		<link rel="stylesheet" href="resources/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
 
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="resources/assets/css/ace-part2.css" class="ace-main-stylesheet" />
-		<![endif]-->
 		<link rel="stylesheet" href="resources/assets/css/ace-skins.css" />
 		<link rel="stylesheet" href="resources/assets/css/ace-rtl.css" />
 
-		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="resources/assets/css/ace-ie.css" />
-		<![endif]-->
-
-		<!-- inline styles related to this page -->
-
-		<!-- ace settings handler -->
 		<script src="resources/assets/js/ace-extra.js"></script>
-
-		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
-
-		<!--[if lte IE 8]>
-		<script src="resources/components/html5shiv/resources/dist/html5shiv.min.js"></script>
-		<script src="resources/components/respond/dest/respond.min.js"></script>
-		<![endif]-->
 
 <style>
     .flex-container {
@@ -338,27 +320,18 @@
 						</div><!-- /.page-content -->
 			<!-- /.main-content -->
 			</div>
-			
-			
-					<!-- basic scripts -->
+						<!-- basic scripts -->
 
 		<!--[if !IE]> -->
-		<script src="resources/components/jquery/resources/dist/jquery.js"></script>
-
-		<!-- <![endif]-->
-
-		<!--[if IE]>
-<script src="resources/components/jquery.1x/resources/dist/jquery.js"></script>
-<![endif]-->
-		
-		<script src="resources/components/bootstrap/resources/dist/js/bootstrap.js"></script>
+		<script src="resources/components/jquery/dist/jquery.js"></script>
+		<script src="resources/components/bootstrap/dist/js/bootstrap.js"></script>
 
 		<!-- page specific plugin scripts -->
 		<script src="resources/components/_mod/bootstrap-duallistbox/jquery.bootstrap-duallistbox.js"></script>
 		<script src="resources/components/raty/lib/jquery.raty.js"></script>
 		<script src="resources/components/_mod/bootstrap-multiselect/bootstrap-multiselect.js"></script>
-		<script src="resources/components/select2/resources/dist/js/select2.js"></script>
-		<script src="resources/components/typeahead.js/resources/dist/typeahead.jquery.js"></script>
+		<script src="resources/components/select2/dist/js/select2.js"></script>
+		<script src="resources/components/typeahead.js/dist/typeahead.jquery.js"></script>
 
 		<!-- ace scripts -->
 		<script src="resources/assets/js/src/elements.scroller.js"></script>
@@ -384,110 +357,108 @@
 		<script src="resources/assets/js/src/ace.settings-skin.js"></script>
 		<script src="resources/assets/js/src/ace.widget-on-reload.js"></script>
 		<script src="resources/assets/js/src/ace.searchbox-autocomplete.js"></script>
-
-		<!-- inline scripts related to this page -->
-		<script type="text/javascript">
-			jQuery(function($){
-			    var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>'});
-				var container1 = demo1.bootstrapDualListbox('getContainer');
-				container1.find('.btn').addClass('btn-white btn-info btn-bold');
+	<script>
+	jQuery(function($){
+	    var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({infoTextFiltered: '<span class="label label-purple label-lg">Filtered</span>'});
+		var container1 = demo1.bootstrapDualListbox('getContainer');
+		container1.find('.btn').addClass('btn-white btn-info btn-bold');
+	
+		/**var setRatingColors = function() {
+			$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
+			$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
+		}*/
+		$('.rating').raty({
+			'cancel' : true,
+			'half': true,
+			'starType' : 'i'
+			/**,
 			
-				/**var setRatingColors = function() {
-					$(this).find('.star-on-png,.star-half-png').addClass('orange2').removeClass('grey');
-					$(this).find('.star-off-png').removeClass('orange2').addClass('grey');
-				}*/
-				$('.rating').raty({
-					'cancel' : true,
-					'half': true,
-					'starType' : 'i'
-					/**,
-					
-					'click': function() {
-						setRatingColors.call(this);
-					},
-					'mouseover': function() {
-						setRatingColors.call(this);
-					},
-					'mouseout': function() {
-						setRatingColors.call(this);
-					}*/
-				})//.find('i:not(.star-raty)').addClass('grey');
-				
-				
-				
-				//////////////////
-				//select2
-				$('.select2').css('width','200px').select2({allowClear:true})
-				$('#select2-multiple-style .btn').on('click', function(e){
-					var target = $(this).find('input[type=radio]');
-					var which = parseInt(target.val());
-					if(which == 2) $('.select2').addClass('tag-input-style');
-					 else $('.select2').removeClass('tag-input-style');
-				});
-				
-				//////////////////
-				$('.multiselect').multiselect({
-				 enableFiltering: true,
-				 enableHTML: true,
-				 buttonClass: 'btn btn-white btn-primary',
-				 templates: {
-					button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> &nbsp;<b class="fa fa-caret-down"></b></button>',
-					ul: '<ul class="multiselect-container dropdown-menu"></ul>',
-					filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text" /></div></li>',
-					filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
-					li: '<li><a tabindex="0"><label></label></a></li>',
-			        divider: '<li class="multiselect-item divider"></li>',
-			        liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>'
-				 }
-				});
+			'click': function() {
+				setRatingColors.call(this);
+			},
+			'mouseover': function() {
+				setRatingColors.call(this);
+			},
+			'mouseout': function() {
+				setRatingColors.call(this);
+			}*/
+		})//.find('i:not(.star-raty)').addClass('grey');
+		
+		
+		
+		//////////////////
+		//select2
+		$('.select2').css('width','200px').select2({allowClear:true})
+		$('#select2-multiple-style .btn').on('click', function(e){
+			var target = $(this).find('input[type=radio]');
+			var which = parseInt(target.val());
+			if(which == 2) $('.select2').addClass('tag-input-style');
+			 else $('.select2').removeClass('tag-input-style');
+		});
+		
+		//////////////////
+		$('.multiselect').multiselect({
+		 enableFiltering: true,
+		 enableHTML: true,
+		 buttonClass: 'btn btn-white btn-primary',
+		 templates: {
+			button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> &nbsp;<b class="fa fa-caret-down"></b></button>',
+			ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+			filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text" /></div></li>',
+			filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+			li: '<li><a tabindex="0"><label></label></a></li>',
+	        divider: '<li class="multiselect-item divider"></li>',
+	        liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>'
+		 }
+		});
+	
+		
+		///////////////////
 			
-				
-				///////////////////
-					
-				//typeahead.js
-				//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
-				var substringMatcher = function(strs) {
-					return function findMatches(q, cb) {
-						var matches, substringRegex;
-					 
-						// an array that will be populated with substring matches
-						matches = [];
-					 
-						// regex used to determine if a string contains the substring `q`
-						substrRegex = new RegExp(q, 'i');
-					 
-						// iterate through the pool of strings and for any string that
-						// contains the substring `q`, add it to the `matches` array
-						$.each(strs, function(i, str) {
-							if (substrRegex.test(str)) {
-								// the typeahead jQuery plugin expects suggestions to a
-								// JavaScript object, refer to typeahead docs for more info
-								matches.push({ value: str });
-							}
-						});
-			
-						cb(matches);
+		//typeahead.js
+		//example taken from plugin's page at: https://twitter.github.io/typeahead.js/examples/
+		var substringMatcher = function(strs) {
+			return function findMatches(q, cb) {
+				var matches, substringRegex;
+			 
+				// an array that will be populated with substring matches
+				matches = [];
+			 
+				// regex used to determine if a string contains the substring `q`
+				substrRegex = new RegExp(q, 'i');
+			 
+				// iterate through the pool of strings and for any string that
+				// contains the substring `q`, add it to the `matches` array
+				$.each(strs, function(i, str) {
+					if (substrRegex.test(str)) {
+						// the typeahead jQuery plugin expects suggestions to a
+						// JavaScript object, refer to typeahead docs for more info
+						matches.push({ value: str });
 					}
-				 }
-			
-				 $('input.typeahead').typeahead({
-					hint: true,
-					highlight: true,
-					minLength: 1
-				 }, {
-					name: 'states',
-					displayKey: 'value',
-					source: substringMatcher(ace.vars['US_STATES']),
-					limit: 10
-				 });
-
-				//in ajax mode, remove remaining elements before leaving page
-				$(document).one('ajaxloadstart.page', function(e) {
-					$('[class*=select2]').remove();
-					$('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
-					$('.rating').raty('destroy');
-					$('.multiselect').multiselect('destroy');
 				});
-			
-			});
-		</script>
+	
+				cb(matches);
+			}
+		 }
+	
+		 $('input.typeahead').typeahead({
+			hint: true,
+			highlight: true,
+			minLength: 1
+		 }, {
+			name: 'states',
+			displayKey: 'value',
+			source: substringMatcher(ace.vars['US_STATES']),
+			limit: 10
+		 });
+
+		//in ajax mode, remove remaining elements before leaving page
+		$(document).one('ajaxloadstart.page', function(e) {
+			$('[class*=select2]').remove();
+			$('select[name="duallistbox_demo1[]"]').bootstrapDualListbox('destroy');
+			$('.rating').raty('destroy');
+			$('.multiselect').multiselect('destroy');
+		});
+	
+	});
+	</script>
