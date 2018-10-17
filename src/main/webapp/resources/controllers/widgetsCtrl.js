@@ -2,7 +2,7 @@
 //var app = angular.module("myApp", ["ngRoute"]);
 
 myApp.controller("widgetsCtrl", function ($scope,$http) {
-	console.log("harish");
+	console.log("name");
     $scope.msg = "";
 	
 	$http({

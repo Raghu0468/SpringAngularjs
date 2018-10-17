@@ -1,6 +1,6 @@
 
 myApp.controller("jquiCtrl", function ($scope,$http) {
-	console.log("harini");
+	console.log("name");
     $scope.msg = "";
 	
 	$http({
